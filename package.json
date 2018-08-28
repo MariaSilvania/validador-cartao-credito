@@ -1,16 +1,16 @@
 {
-  "name": "validador-cartao-credito",
+  "name": "validador",
   "version": "1.0.0",
-  "description": "Desafio biblioteca",
+  "description": "Produto Final",
   "main": "index.js",
   "scripts": {
-    "test": "hello()"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MariaSilvania/validador-cartao-credito.git"
   },
-  "author": "silvania simoes",
+  "author": "silvania",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MariaSilvania/validador-cartao-credito/issues"
