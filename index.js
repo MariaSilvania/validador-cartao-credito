@@ -1,51 +1,52 @@
 module.exports.cardValidator = function
 cardValidator(number) {
-    // try {
-    var array = [];
-    var arrCalculado = [];
+  let array = [];
+  let arrCalculado = [];
+  let arrValores = [];
+  let indiceImpar, somaValorPar, primeiroDigito, segundoDigito, soma = 0;
+  if (number === "") {
+    throw TypeError("Digite um numero de cartão");
+  }
+  if (isNaN(number) == true) {
+    throw TypeError("Valor invalido");
+  }
+  if (number.length < 16) {
+    throw TypeError("Numero de cartao invalido");
+  }
+  for (var i = 0; i < number.length; i++) {
+    array.push(number[i]);
+  }
+  array.reverse();
 
-    if ((number !== "") && (isNaN(number) == false)) {
-        var valor = 0;
-        var valorX = 0;
-        var x = 0;
-        var y = 0;
-        var soma = 0;
+  arrValores = manipularValores();
 
-        for (var i = 0; i < number.length; i++) {
-            array.push(number[i]);
-        }
-        array.reverse();
+  for (var k = 0; k < arrValores.length; k++) {
+    soma += parseInt(arrValores[k]);
+  }
 
-        for (var y = 0; y < number.length; y++) {
-            if ([y] % 2 !== 0) {
-                valor = array[y] * 2;
-                if (valor >= 10) {
-                    x = parseInt(valor.toString().slice(0, 1));
-                    z = parseInt(valor.toString().slice(1, 2));
-                    valorX = x + z;
-                    arrCalculado.push(valorX);
-                } else {
-                    arrCalculado.push(array[y] * 2);
-                }
-            } else {
-                valorX = array[y];
-                arrCalculado.push(valorX);
-            }
-        }
-        for (var k = 0; k < arrCalculado.length; k++) {
-            soma += parseInt(arrCalculado[k]);
-        }
-        var digitoValido = soma % 10;
-        if (digitoValido === 0) {
-            return true;
+  var digitoValido = soma % 10;
+  if (digitoValido === 0) {
+    return true;
+  } else {
+    return false;
+  }
+  function manipularValores() {
+    array.map((numero, indice) => {
+      if ([indice] % 2 !== 0) {
+        indiceImpar = numero * 2;
+        if (indiceImpar >= 10) {
+          primeiroDigito = parseInt(indiceImpar.toString().slice(0, 1));
+          segundoDigito = parseInt(indiceImpar.toString().slice(1, 2));
+          somaValorPar = primeiroDigito + segundoDigito;
+          arrCalculado.push(somaValorPar);
         } else {
-            return false;
+          arrCalculado.push(numero * 2);
         }
-    } else {
-        return "Valor invalido";
-        // throw TypeError("Valor invalido");
-    }
-    // } catch (e) {
-    //     console.log(e);
-    // }
+      } else {
+        somaValorPar = numero;
+        arrCalculado.push(somaValorPar);
+      }
+    });
+    return arrCalculado;
+  }
 }

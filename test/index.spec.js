@@ -6,28 +6,25 @@ var expect = chai.expect;
 
 describe.only("validaCartao", function () {
     describe("#cardValidator", function () {
-        it("Quando nao informar numero do cartao", function () {
-            expect(validaCartao.cardValidator(""))
-                .to.deep.equal("Valor invalido");
+        it("Quando nao houver parametro", function () {
+            expect(() => validaCartao.cardValidator("")).to.throw();
         });
-        // });
-        // describe("#cardValidator", function () {
+        it("Quando o numero for uma string", function () {
+            expect(() => validaCartao.cardValidator("sil")).to.throw();
+        });
+        it("Quando o numero for um inteiro e houver um digito", function () {
+            expect(() => validaCartao.cardValidator("1")).to.throw();
+        });
+        it("Quando o numero for um inteiro e houver menos de 16 digitos", function () {
+            expect(() => validaCartao.cardValidator("45394015278")).to.throw();
+        });
         it("Quando informar numero do cartao valido", function () {
-            expect(validaCartao.cardValidator("36490102462661"))
+            expect(validaCartao.cardValidator("4539401527887378"))
                 .to.deep.equal(true);
         });
-        // });
-        // describe("#cardValidator", function () {
         it("Quando informar numero do cartao invalido", function () {
-            expect(validaCartao.cardValidator("406168310095334"))
+            expect(validaCartao.cardValidator("4539401527887372"))
                 .to.deep.equal(false);
         });
-        // });
-        // describe("#cardValidator", function () {
-        it("Quando informar uma string", function () {
-            expect(validaCartao.cardValidator("sil"))
-                .to.deep.equal("Valor invalido");
-        });
     });
-
 });

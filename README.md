@@ -13,14 +13,14 @@ Exemplo de uso:
 ```
 $node
 > let validarCartao = require("validador-cartao-credito")
-> validarCartao.cardValidator("36490102462661"); //true
+> validarCartao("36490102462661"); //true
 ```
 
 
 ## versão 1.0.0
 
 - funcionalidades: valida se o cartao de credito é valido;
-- valida se não informar paramento.
+- valida se não foi informado o paramento para a validaçao.
 
 
 
@@ -31,6 +31,13 @@ $node
 
 
 ## roadmap oficial do projeto
+
+#### versão 2.0.0 (sem previsão, aceita-se contribuições)
+- verificar qual a bandeira do cartão de credito;
+- verificar catão está dentro da data de validade.
+- verificar se o nome tem o formato correto.
+- README translated to english;
+
 
 #### versão 1.0.0 (released)
 - funcionalidades: validador de cartao de crédito.
