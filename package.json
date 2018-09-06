@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/MariaSilvania/validador-cartao-credito/issues"
   },
-  "homepage": "https://github.com/MariaSilvania/validador-cartao-credito#readme"
+  "homepage": "https://github.com/MariaSilvania/validador-cartao-credito#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "eslint": "^5.5.0"
+  }
 }
