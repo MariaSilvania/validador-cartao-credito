@@ -19,7 +19,7 @@ describe.only("validaCartao", function () {
             expect(() => validaCartao.cardValidator("45394015278")).to.throw();
         });
         it("Quando informar numero do cartao valido", function () {
-            expect(validaCartao.cardValidator(4798846349843569))
+            expect(validaCartao.cardValidator("4798846349843569"))
                 .to.deep.equal(true);
         });
         it("Quando informar numero do cartao invalido", function () {

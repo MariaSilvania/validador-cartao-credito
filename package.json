@@ -18,6 +18,7 @@
   "homepage": "https://github.com/MariaSilvania/validador-cartao-credito#readme",
   "dependencies": {
     "assert": "^1.4.1",
+    "chai": "^4.1.2",
     "eslint": "^5.5.0"
   }
 }
