@@ -1,5 +1,4 @@
-module.exports.cardValidator = function
-cardValidator(number) {
+function cardValidator(number) {
   let array = [];
   let arrCalculado = [];
   let indiceImpar, somaValorPar, primeiroDigito, segundoDigito, soma = 0;
@@ -52,3 +51,4 @@ cardValidator(number) {
     return arrCalculado;
   }
 };
+module.exports = cardValidator;
