@@ -1,6 +1,6 @@
 {
   "name": "validador-cartao-credito",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "valida cartao de credito",
   "main": "index.js",
   "scripts": {
