@@ -9,16 +9,14 @@ function cardValidator(number) {
   if (isNaN(number) == true) {
     throw TypeError("Valor invalido");
   }
-  if (number.length < 16) {
-    throw TypeError("O cartao deve ter mais de 15 digito");
+  if (number.length <= 14) {
+    throw TypeError("O cartao deve ter mais de 14 digito");
   }
   for (var i = 0; i < number.length; i++) {
     array.push(number[i]);
   }
   array.reverse();
-
   var valorFuncao = manipularValores();
-
 
   for (var k = 0; k < arrCalculado.length; k++) {
     soma += parseInt(arrCalculado[k]);
