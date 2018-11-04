@@ -4,7 +4,7 @@
 Na versão atual é capaz de identificar se o cartao de credito é válido.
 
 
-## Os métodos utilizados na biblioteca são:
+## Os método utilizado na biblioteca:
 
 #### **cardValidator(number);**
 
@@ -12,7 +12,7 @@ Exemplo de uso:
 
 ```
 $node
-> let validarCartao = require("validador-cart-credito")
+> let validarCartao = require("valid-cart-cred")
 > validarCartao("5255588327612409"); //true
 ```
 
@@ -27,7 +27,7 @@ $node
 ## instalação
 
 - você deverá ter o node + npm instalados. Para guia de instalação, visite [o site oficial](https://www.npmjs.com/get-npm).
-- proceda com a instalação com `$npm install validador-cartao-credito`
+- proceda com a instalação com `$npm install valid-cart-cred`
 
 
 ## roadmap oficial do projeto
