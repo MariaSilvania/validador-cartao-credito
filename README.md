@@ -12,7 +12,7 @@ Exemplo de uso:
 
 ```
 $node
-> let validarCartao = require("validador-cartao-credito")
+> let validarCartao = require("validador-cart-credito")
 > validarCartao("5255588327612409"); //true
 ```
 
