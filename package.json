@@ -1,7 +1,7 @@
 {
-  "name": "cartao-credito-valido",
+  "name": "validador-cart-credito",
   "version": "1.0.0",
-  "description": "Cartao_credito-valido",
+  "description": "validacao-cartao",
   "main": "index.js",
   "directories": {
     "test": "test"
